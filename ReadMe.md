@@ -1,7 +1,7 @@
 # Anchor Space Optimal Transport (ASOT)
 This repository contains the source codes of the paper [_Anchor Space Optimal Transport as a Fast Solution to Multiple Optimal Transport Problems_](https://ieeexplore.ieee.org/document/10704726), whcih is currently published in IEEE Transactions on Neural Networks and Learning Systems.
 
-As decribed in our paper, we implement our proposed anchor space learning models such as ASOT-ML, ASOT-DL, and ASOT-k, where ASOT-ML is based on a metric leanring framework detailed in Figure 2(a) of our preprint, ASOT-DL is based on a dictionary learning framework (Figure 2(b)), and ASOT-k is another variant based on the mini-batch k-means.
+As decribed in our paper, we implement our proposed anchor space learning models such as ASOT-ML, ASOT-DL, and ASOT-k, where ASOT-ML is based on a metric leanring framework detailed in Figure 2(a) of our paper, ASOT-DL is based on a dictionary learning framework (Figure 2(b)), and ASOT-k is another variant based on the mini-batch k-means.
 
 It should be noted that, because we use GPU parallelization, CUDA and cuDNN are required for faster computation. Although these codes are also runnable in a cpu-only environment, we do not recommand to run them on machines without GPU. In details, we run them in an environment with CUDA v11.3+cuDNN 8.2.1.
 
@@ -203,7 +203,7 @@ python exp_SOT_graph_dataset_curves.py --dataset MUTAG --method sliced_Wass
 
 python exp_draw_curves.py --dataset MUTAG --epochs 2000 --ml 100.0
 ```
-which output the curves of approximation errors of the MUTAG dataset (Figure 3 of our preprint).
+which output the curves of approximation errors of the MUTAG dataset (Figure 3 of our paper).
 
 For the time costs, they are recorded in a json file 'result.json'. For an example, after running the commands above, you can find the detailed records in './results/MUTAG/exp_SOT_bd350f2d483338d390409f219fbc3e10f8d6ce63/result.json', which is a python Dict data. In this json file, "records" -> "time" -> "time_eSOT_test", "time_SOT_train", "time_SOT_EMD_test" show the time costs of eSOT testing, model training, and EMD testing, which are all lists of sizes equal to the number of epochs.
 
