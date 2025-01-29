@@ -7,7 +7,7 @@ It should be noted that, because we use GPU parallelization, CUDA and cuDNN are 
 
 
 ## Dependencies
-The code is successfully tested by using Python 3.7 on Windows 11. It relies on the following dependencies:
+The code is successfully tested using Python 3.7 on Windows 11. It relies on the following dependencies:
 
 - numpy (1.21.6)
 - scikit-learn (1.0.2)
