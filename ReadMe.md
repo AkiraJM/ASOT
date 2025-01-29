@@ -1,5 +1,5 @@
 # Anchor Space Optimal Transport (ASOT)
-These are the source codes of our preprint _Anchor Space Optimal Transport: Accelerating Batch Processing of Multiple OT Problems_.
+This repository contains the source codes of the paper _Anchor Space Optimal Transport as a Fast Solution to Multiple Optimal Transport Problems_, whcih is currently published in IEEE Transactions on Neural Networks and Learning Systems.
 
 As decribed in our paper, we implement our proposed anchor space learning models such as ASOT-ML, ASOT-DL, and ASOT-k, where ASOT-ML is based on a metric leanring framework detailed in Figure 2(a) of our preprint, ASOT-DL is based on a dictionary learning framework (Figure 2(b)), and ASOT-k is another variant based on the mini-batch k-means.
 
@@ -208,3 +208,15 @@ which output the curves of approximation errors of the MUTAG dataset (Figure 3 o
 For the time costs, they are recorded in a json file 'result.json'. For an example, after running the commands above, you can find the detailed records in './results/MUTAG/exp_SOT_bd350f2d483338d390409f219fbc3e10f8d6ce63/result.json', which is a python Dict data. In this json file, "records" -> "time" -> "time_eSOT_test", "time_SOT_train", "time_SOT_EMD_test" show the time costs of eSOT testing, model training, and EMD testing, which are all lists of sizes equal to the number of epochs.
 
 It should be noted that, because we compute distances with both Sinkhorn and EMD solvers for each epoch, where the time cost of EMD solver is usually very high, it might take a time until finishing all experiments.
+
+## Citation
+If you make use of our code, please use the following Bibtex citation.
+```
+@article{huang2024anchor,
+  title={Anchor Space Optimal Transport as a Fast Solution to Multiple Optimal Transport Problems},
+  author={Huang, Jianming and Su, Xun and Fang, Zhongxi and Kasai, Hiroyuki},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  year={2024},
+  publisher={IEEE}
+}
+```
