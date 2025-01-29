@@ -1,5 +1,5 @@
 # Anchor Space Optimal Transport (ASOT)
-This repository contains the source codes of the paper _Anchor Space Optimal Transport as a Fast Solution to Multiple Optimal Transport Problems_, whcih is currently published in IEEE Transactions on Neural Networks and Learning Systems.
+This repository contains the source codes of the paper [_Anchor Space Optimal Transport as a Fast Solution to Multiple Optimal Transport Problems_](https://ieeexplore.ieee.org/document/10704726), whcih is currently published in IEEE Transactions on Neural Networks and Learning Systems.
 
 As decribed in our paper, we implement our proposed anchor space learning models such as ASOT-ML, ASOT-DL, and ASOT-k, where ASOT-ML is based on a metric leanring framework detailed in Figure 2(a) of our preprint, ASOT-DL is based on a dictionary learning framework (Figure 2(b)), and ASOT-k is another variant based on the mini-batch k-means.
 
